@@ -1,17 +1,16 @@
-%define oname xfce4-smartbookmark-plugin
-
 Summary:	Smart bookmarks for the Xfce panel
-Name:		xfce-smartbookmark-plugin
+Name:		xfce4-smartbookmark-plugin
 Version:	0.4.2
-Release:	%mkrel 4
+Release:	%mkrel 5
 Group:		Graphical desktop/Xfce
-License:	GPL
-URL:		http://goodies.xfce.org/projects/panel-plugins/%{oname}
-Source0:	http://goodies.xfce.org/releases/%{oname}/%{oname}-%{version}.tar.bz2
+License:	GPLv2+
+URL:		http://goodies.xfce.org/projects/panel-plugins/%{name}
+Source0:	http://goodies.xfce.org/releases/%{oname}/%{name}-%{version}.tar.bz2
 Patch0:		smartbookmark-mdv-bugzilla.patch
 BuildRequires:	xfce-panel-devel >= 4.4.1
 BuildRequires:	perl(XML::Parser)
 Requires:	xfce-panel >= 4.4.1
+Obsoletes:	xfce-smartbookmark-plugin
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
@@ -20,7 +19,7 @@ Google. It allows you to send requests directly to your browser and perform
 custom searches.
 
 %prep
-%setup -qn %{oname}-%{version}
+%setup -q
 %patch0 -p1
 
 %build
@@ -34,13 +33,13 @@ rm -rf %{buildroot}
 
 find %{buildroot} -type f -name "*.la" -exec rm -f {} ';'
 
-%find_lang %{oname}
+%find_lang %{name}
 
 %clean
 rm -rf %{buildroot}
 
-%files -f %{oname}.lang
+%files -f %{name}.lang
 %defattr(-,root,root,-)
-%doc AUTHORS COPYING ChangeLog README
+%doc AUTHORS ChangeLog README
 %{_libdir}/xfce4/panel-plugins/*.so
 %{_datadir}/xfce4/panel-plugins/*.desktop
