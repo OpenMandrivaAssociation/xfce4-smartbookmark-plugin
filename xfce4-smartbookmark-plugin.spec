@@ -11,7 +11,6 @@ BuildRequires:	xfce4-panel-devel >= 4.4.2
 BuildRequires:	perl(XML::Parser)
 Requires:	xfce4-panel >= 4.4.2
 Obsoletes:	xfce-smartbookmark-plugin
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 A plugin which allows you to do a search directly on Internet on sites like 
