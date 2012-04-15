@@ -1,7 +1,7 @@
 Summary:	Smart bookmarks for the Xfce panel
 Name:		xfce4-smartbookmark-plugin
-Version:	0.4.2
-Release:	%mkrel 13
+Version:	0.4.4
+Release:	1
 Group:		Graphical desktop/Xfce
 License:	GPLv2+
 URL:		http://goodies.xfce.org/projects/panel-plugins/%{name}
@@ -12,7 +12,6 @@ BuildRequires:	libxfcegui4-devel
 BuildRequires:	perl(XML::Parser)
 Requires:	xfce4-panel >= 4.4.2
 Obsoletes:	xfce-smartbookmark-plugin
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 A plugin which allows you to do a search directly on Internet on sites like 
@@ -29,18 +28,13 @@ custom searches.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 find %{buildroot} -type f -name "*.la" -exec rm -f {} ';'
 
-%find_lang %{name}
-
-%clean
-rm -rf %{buildroot}
+%find_lang %{name} %{name}.lang
 
 %files -f %{name}.lang
-%defattr(-,root,root,-)
 %doc AUTHORS ChangeLog README
 %{_libdir}/xfce4/panel-plugins/*.so
 %{_datadir}/xfce4/panel-plugins/*.desktop
