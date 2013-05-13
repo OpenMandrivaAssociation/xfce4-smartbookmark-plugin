@@ -8,7 +8,7 @@ URL:		http://goodies.xfce.org/projects/panel-plugins/%{name}
 Source0:	http://goodies.xfce.org/releases/%{oname}/%{name}-%{version}.tar.bz2
 Patch0:		smartbookmark-mdv-bugzilla.patch
 BuildRequires:	xfce4-panel-devel >= 4.4.2
-BuildRequires:	libxfcegui4-devel
+BuildRequires:	pkgconfig(libxfcegui4-1.0)
 BuildRequires:	perl(XML::Parser)
 Requires:	xfce4-panel >= 4.4.2
 Obsoletes:	xfce-smartbookmark-plugin
