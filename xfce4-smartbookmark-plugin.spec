@@ -1,7 +1,7 @@
 Summary:	Smart bookmarks for the Xfce panel
 Name:		xfce4-smartbookmark-plugin
-Version:	0.4.3
-Release:	3
+Version:	0.4.6
+Release:	1
 Group:		Graphical desktop/Xfce
 License:	GPLv2+
 URL:		http://goodies.xfce.org/projects/panel-plugins/%{name}
@@ -23,7 +23,7 @@ custom searches.
 %patch0 -p1
 
 %build
-%configure2_5x \
+%configure \
 	--disable-static
 %make
 
