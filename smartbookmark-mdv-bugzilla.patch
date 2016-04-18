@@ -2,7 +2,7 @@ diff -Naur xfce4-smartbookmark-plugin-0.4.2/src/smartbookmark.c xfce4-smartbookm
 --- xfce4-smartbookmark-plugin-0.4.2/src/smartbookmark.c	2006-08-12 17:41:44.000000000 +0000
 +++ xfce4-smartbookmark-plugin-0.4.2.tpg/src/smartbookmark.c	2007-06-05 13:26:56.000000000 +0000
 @@ -197,7 +197,7 @@
-     box = gtk_vbox_new(FALSE, 0);
+     gtk_container_add(GTK_CONTAINER(align), search->box);
  
      /* default options */
 -    search->url = "http://bugs.debian.org/";

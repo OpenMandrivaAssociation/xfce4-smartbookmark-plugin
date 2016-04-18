@@ -1,3 +1,5 @@
+%define _disable_rebuild_configure 1
+
 Summary:	Smart bookmarks for the Xfce panel
 Name:		xfce4-smartbookmark-plugin
 Version:	0.4.6
@@ -36,5 +38,5 @@ find %{buildroot} -type f -name "*.la" -exec rm -f {} ';'
 
 %files -f %{name}.lang
 %doc AUTHORS ChangeLog README
-%{_libdir}/xfce4/panel-plugins/*.so
-%{_datadir}/xfce4/panel-plugins/*.desktop
+%{_libdir}/xfce4/panel/plugins/*.so
+%{_datadir}/xfce4/panel/plugins/*.desktop
