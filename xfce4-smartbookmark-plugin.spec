@@ -1,16 +1,17 @@
 %define _disable_rebuild_configure 1
+%define url_ver %(echo %version | cut -d. -f1,2)
 
 Summary:	Smart bookmarks for the Xfce panel
 Name:		xfce4-smartbookmark-plugin
-Version:	0.4.6
+Version:	0.5.0
 Release:	1
 Group:		Graphical desktop/Xfce
 License:	GPLv2+
 URL:		http://goodies.xfce.org/projects/panel-plugins/%{name}
-Source0:	http://goodies.xfce.org/releases/%{oname}/%{name}-%{version}.tar.bz2
+Source0:	http://archive.xfce.org/src/panel-plugins/%{name}/%{url_ver}/%{name}-%{version}.tar.bz2
 Patch0:		smartbookmark-mdv-bugzilla.patch
-BuildRequires:	pkgconfig(libxfce4panel-1.0)
-BuildRequires:	pkgconfig(libxfce4ui-1)
+BuildRequires:	pkgconfig(libxfce4panel-2.0)
+BuildRequires:	pkgconfig(libxfce4ui-2)
 BuildRequires:	perl(XML::Parser)
 Requires:	xfce4-panel >= 4.4.2
 Obsoletes:	xfce-smartbookmark-plugin
