@@ -3,7 +3,7 @@
 
 Summary:	Smart bookmarks for the Xfce panel
 Name:		xfce4-smartbookmark-plugin
-Version:	0.5.0
+Version:	0.5.1
 Release:	1
 Group:		Graphical desktop/Xfce
 License:	GPLv2+
@@ -13,7 +13,7 @@ Patch0:		smartbookmark-mdv-bugzilla.patch
 BuildRequires:	pkgconfig(libxfce4panel-2.0)
 BuildRequires:	pkgconfig(libxfce4ui-2)
 BuildRequires:	perl(XML::Parser)
-Requires:	xfce4-panel >= 4.4.2
+Requires:	xfce4-panel
 Obsoletes:	xfce-smartbookmark-plugin
 
 %description
@@ -28,10 +28,10 @@ custom searches.
 %build
 %configure \
 	--disable-static
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 find %{buildroot} -type f -name "*.la" -exec rm -f {} ';'
 
