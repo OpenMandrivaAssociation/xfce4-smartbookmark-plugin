@@ -9,7 +9,7 @@ Group:		Graphical desktop/Xfce
 License:	GPLv2+
 URL:		http://goodies.xfce.org/projects/panel-plugins/%{name}
 Source0:	http://archive.xfce.org/src/panel-plugins/%{name}/%{url_ver}/%{name}-%{version}.tar.bz2
-Patch0:		smartbookmark-mdv-bugzilla.patch
+
 BuildRequires:	pkgconfig(libxfce4panel-2.0)
 BuildRequires:	pkgconfig(libxfce4ui-2)
 BuildRequires:	perl(XML::Parser)
@@ -23,7 +23,7 @@ custom searches.
 
 %prep
 %setup -q
-%patch0 -p1
+
 
 %build
 %configure \
