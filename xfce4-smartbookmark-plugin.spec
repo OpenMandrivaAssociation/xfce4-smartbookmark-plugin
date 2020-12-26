@@ -3,7 +3,7 @@
 
 Summary:	Smart bookmarks for the Xfce panel
 Name:		xfce4-smartbookmark-plugin
-Version:	0.5.1
+Version:	0.5.2
 Release:	1
 Group:		Graphical desktop/Xfce
 License:	GPLv2+
@@ -38,6 +38,6 @@ find %{buildroot} -type f -name "*.la" -exec rm -f {} ';'
 %find_lang %{name} %{name}.lang
 
 %files -f %{name}.lang
-%doc AUTHORS ChangeLog README
+%doc AUTHORS ChangeLog README*
 %{_libdir}/xfce4/panel/plugins/*.so
 %{_datadir}/xfce4/panel/plugins/*.desktop
