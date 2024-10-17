@@ -7,7 +7,7 @@ Version:	0.5.2
 Release:	2
 Group:		Graphical desktop/Xfce
 License:	GPLv2+
-URL:		http://goodies.xfce.org/projects/panel-plugins/%{name}
+URL:		https://goodies.xfce.org/projects/panel-plugins/%{name}
 Source0:	http://archive.xfce.org/src/panel-plugins/%{name}/%{url_ver}/%{name}-%{version}.tar.bz2
 
 BuildRequires:	pkgconfig(libxfce4panel-2.0)
