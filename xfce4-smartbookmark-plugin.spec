@@ -3,12 +3,12 @@
 
 Summary:	Smart bookmarks for the Xfce panel
 Name:		xfce4-smartbookmark-plugin
-Version:	0.5.2
-Release:	2
+Version:	0.5.3
+Release:	1
 Group:		Graphical desktop/Xfce
 License:	GPLv2+
 URL:		https://goodies.xfce.org/projects/panel-plugins/%{name}
-Source0:	http://archive.xfce.org/src/panel-plugins/%{name}/%{url_ver}/%{name}-%{version}.tar.bz2
+Source0:	https://archive.xfce.org/src/panel-plugins/%{name}/%{url_ver}/%{name}-%{version}.tar.bz2
 
 BuildRequires:	pkgconfig(libxfce4panel-2.0)
 BuildRequires:	pkgconfig(libxfce4ui-2)
@@ -22,7 +22,7 @@ Google. It allows you to send requests directly to your browser and perform
 custom searches.
 
 %prep
-%setup -q
+%autosetup -p1
 
 
 %build
